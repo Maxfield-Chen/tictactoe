@@ -11,7 +11,7 @@
   (peek game))
 
 (defn play-move
-  "On reception of the move command"
+  "Play current player move at the provided coordinate"
   [game coord]
   (if-let [new-turn (turn/next-turn (current-turn game) coord)]
     (conj game new-turn)
